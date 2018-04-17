@@ -1,0 +1,29 @@
+<tool id="illuminaio_readidat" name="illuminaio_readidat" version="0.1.0">
+    <description>load .IDAT files</description>
+    <requirements>
+        <requirement type="package" version="1.24.0">bioconductor-minfi</requirement>
+    </requirements>
+    <command detect_errors="exit_code"><![CDATA[
+        Rscript ${__tool_directory__}/readIDAT.R "$input1" "$input2" "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="idat" />
+        <param type="data" name="input2" format="idat" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="rdata" />
+    </outputs>
+    <tests>
+        <test>
+            <param name="input1" value="5723646052_R04C01_Grn.idat"/>
+            <param name="input2" value="5723646052_R04C01_Red.idat"/>
+            <output name="output1" file="idatFile.rdata"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+        This tool reads idat files
+    ]]></help>
+    <citations>
+        <citation type="doi">10.18129/B9.bioc.illuminaio</citation>
+    </citations>
+</tool>

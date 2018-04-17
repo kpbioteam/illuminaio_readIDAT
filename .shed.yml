@@ -1,0 +1,6 @@
+categories: [Epigenetics]
+description: This read green and read idat and returns a GenomicRatioSet object
+homepage_url: https://github.com/kpbioteam/illuminaio_readidat
+name: illuminaio_readidat
+owner: kpbioteam
+remote_repository_url: https://github.com/kpbioteam/illuminaio_readidat
